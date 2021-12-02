@@ -2,8 +2,7 @@
 #include <iostream>
 
 
-
-class Solution(){
+class Solution{
   public:
     Solution() : input("input.txt"){
 
