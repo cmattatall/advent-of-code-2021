@@ -96,33 +96,19 @@ void Solution::part2() {
          [this](std::string const &dist_str) {
              int value;
              std::from_chars(dist_str.data(), dist_str.data() + dist_str.size(), value);
-
-             std::cout << "before >forward " << dist_str << "< , x = " << this->coords.x << ", y = " << this->coords.y
-                       << " and aim = " << this->coords.aim << std::endl;
              this->coords.x += value;
              this->coords.y += value * this->coords.aim;
-             std::cout << "after >forward " << dist_str << "< , x = " << this->coords.x << ", y = " << this->coords.y
-                       << " and aim = " << this->coords.aim << std::endl;
          }},
         {"up",
          [this](std::string const &dist_str) {
              int value;
              std::from_chars(dist_str.data(), dist_str.data() + dist_str.size(), value);
-
-             std::cout << "before >up " << dist_str << "< , x = " << this->coords.x << ", y = " << this->coords.y
-                       << " and aim = " << this->coords.aim << std::endl;
              this->coords.aim -= value;
-             std::cout << "after >up " << dist_str << "< , x = " << this->coords.x << ", y = " << this->coords.y
-                       << " and aim = " << this->coords.aim << std::endl;
          }},
         {"down", [this](std::string const &dist_str) {
              int value;
              std::from_chars(dist_str.data(), dist_str.data() + dist_str.size(), value);
-             std::cout << "before >down " << dist_str << "< , x = " << this->coords.x << ", y = " << this->coords.y
-                       << " and aim = " << this->coords.aim << std::endl;
              this->coords.aim += value;
-             std::cout << "after >down " << dist_str << "< , x = " << this->coords.x << ", y = " << this->coords.y
-                       << " and aim = " << this->coords.aim << std::endl;
          }}};
 
     std::string line;
